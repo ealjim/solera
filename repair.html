@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repair Claim</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2a44;
+      --muted: #5b6475;
+      --accent: #0b5cab;
+      --accent-dark: #08498a;
+      --border: #d9e2ef;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef3f9 0%, #f8fbff 100%);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 32px auto;
+      padding: 0 20px 32px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #ffffff 0%, #f4f8fd 100%);
+    }
+
+    .logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .title-wrap {
+      text-align: right;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .content {
+      padding: 28px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .section {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 1.15rem;
+      color: var(--accent-dark);
+      border-bottom: 2px solid #edf3fb;
+      padding-bottom: 10px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: minmax(160px, 220px) 1fr;
+      row-gap: 12px;
+      column-gap: 12px;
+      align-items: center;
+    }
+
+    .label {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .value {
+      color: var(--muted);
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .input-row input {
+      flex: 1;
+      min-width: 0;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .search-btn {
+      padding: 10px 16px;
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .search-btn:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0 28px 28px;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #f8fbff;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover {
+      background: #eef5ff;
+      border-color: #bfd3ee;
+    }
+
+    .footer {
+      padding: 0 28px 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .title-wrap {
+        text-align: left;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      .input-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="header">
+        <img src="Solera 2.png" alt="Solera logo" class="logo" />
+        <div class="title-wrap">
+          <h1>Repair Claim</h1>
+          <div class="subtitle">Customer repair shop update</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <section class="section">
+          <h2>Customer & Vehicle Information</h2>
+          <div class="details">
+            <div class="label">Name:</div>
+            <div class="value">Jonathan Sundholm</div>
+
+            <div class="label">Vehicle:</div>
+            <div class="value">2025 Chevrolet Tahoe</div>
+
+            <div class="label">Color:</div>
+            <div class="value">Black</div>
+
+            <div class="label">VIN:</div>
+            <div class="value">*****63521</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Repair Shop</h2>
+          <div class="details">
+            <div class="label">Shop Name:</div>
+            <div class="value">Tim's Automotive</div>
+
+            <div class="label">Shop Address:</div>
+            <div class="value">1193 Chattan Way, Fort Wayne, IN 46845</div>
+
+            <div class="label">Shop Phone:</div>
+            <div class="value">260.432.1122</div>
+
+            <div class="label">Shop Contact:</div>
+            <div class="value">Tim Anderson</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Updated Repair Shop</h2>
+          <div class="details">
+            <div class="label">Shop Name:</div>
+            <div class="value">
+              <div class="input-row">
+                <input type="text" id="shopName" placeholder="Enter repair shop name" />
+                <button class="search-btn" onclick="populateShop()">Search</button>
+              </div>
+            </div>
+
+            <div class="label">Shop Address:</div>
+            <div class="value" id="shopAddress"></div>
+
+            <div class="label">Shop Phone:</div>
+            <div class="value" id="shopPhone"></div>
+
+            <div class="label">Shop Contact:</div>
+            <div class="value" id="shopContact"></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="links">
+        <a href="#" onclick="return false;">Customer Profile</a>
+        <a href="#" onclick="return false;">Policies</a>
+        <a href="#" onclick="return false;">Claims</a>
+        <a href="https://ealjim.github.io/solera/index.html">Repair Claim</a>
+      </div>
+
+      <div class="footer">© Solera Automotive Services</div>
+    </div>
+  </div>
+
+  <script>
+    function populateShop() {
+      document.getElementById('shopAddress').textContent =
+        '7193 E State Blvd, Fort Wayne, IN 46815';
+      document.getElementById('shopPhone').textContent = '260.373.3333';
+      document.getElementById('shopContact').textContent = 'John Young';
+    }
+  </script>
+</body>
+</html>
